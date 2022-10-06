@@ -12,10 +12,12 @@
 
     --fw-reg: 300;
     --fw-bold: 900;
+    --fw-light: 250;
 
     --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-dark: #BB8B46;
+    --clr-accent: #CBD8E6;
+    --clr-darker: #21263b;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -59,12 +61,18 @@ img {
     max-width: 100%;
 }
 
-strong { font-weight: var(--fw-bold); }
+light { font-weight: var(--fw-light); }
 
 :focus {
     outline: 3px solid var(--clr-accent);
     outline-offset: 3px;
 }
+
+a:link, a:visited {
+    color: var(--clr-accent);
+    text-decoration: none;
+    display: inline-block;
+  }
 
 
 /* Buttons */
@@ -103,10 +111,12 @@ h3 { font-size: var(--fs-h3) }
 
 .section__title {
     margin-bottom: .25em;
+    color: var(--clr-darker);
 }
 
 .section__subtitle--intro {
     font-weight: var(--fw-reg);
+    color: var(--clr-darker);
 }
 
 .section__subtitle--intro strong {
@@ -182,7 +192,7 @@ header {
 }
 
 .nav-toggle {
-    padding: .5em;
+    padding: 1em;
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -220,10 +230,10 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-accent);
+    background: var(--clr-darker);
     width: 2em;
     height: 3px;
-    border-radius: 1em;
+    border-radius: 2em;
     transition: transform 250ms ease-in-out;
 }
 
@@ -235,8 +245,8 @@ header {
     right: 0;
 }
 
-.hamburger::before { top: 6px; }
-.hamburger::after { bottom: 6px; }
+.hamburger::before { top: 7px; }
+.hamburger::after { bottom: 7px; }
 
 
 /* Intro Section */
@@ -253,6 +263,7 @@ header {
     display: inline-block;
 }
 
+
 @media (min-width: 600px) {
     .intro {
         display: grid;
@@ -267,7 +278,9 @@ header {
 
     .intro__img {
         grid-area: img;
-        min-width: 250px;
+        min-width: 500px;
+        top: -8em;
+        margin-bottom: -4em;
         position: relative;
         z-index: 2;
     }
@@ -276,17 +289,17 @@ header {
         align-self: start;
         grid-column: -1/1;
         grid-row: 2;
-        text-align: right;
+        text-align: left;
         position: relative;
         left: -1.5em;
-        width: calc(100% + 1.5em);
+        width: calc(100% + 25em);
     }
 }
 
 .about-me {
     background-color: var(--clr-dark);
-    color: var(--clr-light);
-    max-width: 1000px;
+    color: var(--clr-darker);
+    max-width: fit-content;
     margin: 0 auto;
 
 }
@@ -304,6 +317,7 @@ header {
             "subtitle img"
             "text img";
         grid-column-gap: 2em;
+        
     }
 
     .section__title--about {
