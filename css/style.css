@@ -52,6 +52,7 @@ body {
     line-height: 1.6;
 }
 
+
 section {
     padding: 5em 2em;
 }
@@ -137,7 +138,7 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .section__subtitle--work {
-    color: var(--clr-accent);
+    color: var(--clr-darker );
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
 }
@@ -174,7 +175,7 @@ header {
     display: flex;
     height: 100%;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -248,7 +249,6 @@ header {
 .hamburger::before { top: 7px; }
 .hamburger::after { bottom: 7px; }
 
-
 /* Intro Section */
 
 .intro {
@@ -280,7 +280,7 @@ header {
         grid-area: img;
         min-width: 500px;
         top: -8em;
-        margin-bottom: -4em;
+        margin-bottom: -3em;
         position: relative;
         z-index: 2;
     }
@@ -296,12 +296,19 @@ header {
     }
 }
 
+/* About me */
+
 .about-me {
     background-color: var(--clr-dark);
     color: var(--clr-darker);
-    max-width: fit-content;
+    min-width: 500px;
     margin: 0 auto;
 
+}
+
+.about-me__text {
+    text-align: justify;
+    margin: 0 auto;
 }
 
 .about-me__img {
@@ -311,7 +318,7 @@ header {
 @media (min-width: 600px) {
     .about-me {
         display: grid;
-        grid-template-columns: 1fr 200px;
+        grid-template-columns: 2fr 400px;
         grid-template-areas: 
             "title img"
             "subtitle img"
@@ -321,22 +328,28 @@ header {
     }
 
     .section__title--about {
+        text-align: center;
+        position: relative;
         grid-area: title;
+        
     }
     .section__subtitle--about {
-        grid-column: 1 / -1;
+        grid-column: 1;
         grid-row: 2;
         position: relative;
-        left: -2em;
+        left: 6em;
+        text-align: center;
         width: calc(100% + 4em);
-        padding-left: 2em;
-        padding-right: calc(200px + 4em);
+        padding-left: 50px;
+        padding-right: calc(100px + 6.5em);
+        max-width: 1000px;
     }
 
     .about-me__img {
         grid-area: img;
         position: relative;
         z-index: 2;
+        
     }
 }
 
