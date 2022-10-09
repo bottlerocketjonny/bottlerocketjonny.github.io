@@ -34,14 +34,16 @@
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
     }
+    
 }
 
 /* General styles */
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    
 }
-
 
 body {
     background: var(--clr-light);
@@ -50,6 +52,8 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+    position: relative
+    overflow-x: hidden;
 }
 
 
@@ -270,7 +274,7 @@ header {
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .intro {
         display: grid;
         width: min-content;
@@ -286,7 +290,7 @@ header {
         grid-area: img;
         min-width: 500px;
         top: -8em;
-        margin-bottom: -3em;
+        bottom: -3em;
         position: relative;
         z-index: 2;
     }
@@ -307,7 +311,7 @@ header {
 .about-me {
     background-color: var(--clr-dark);
     color: var(--clr-darker);
-    min-width: 500px;
+    
     margin: 0 auto;
 
 }
@@ -355,11 +359,17 @@ header {
         grid-area: img;
         position: relative;
         z-index: 2;
-        
     }
 }
 
 /* Portfolio */
+
+.section__title--work {
+    text-align: center;
+    position: relative;
+    grid-area: title;
+    left: 1em;
+}
 
 .my-work {
     text-align: center;
