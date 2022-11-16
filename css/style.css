@@ -52,12 +52,13 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
-    position: relative overflow-x: hidden;
+    position: relative;
+    overflow-x: hidden;
 }
 
 
 section {
-    padding: 5em 5em;
+    padding: 5em 3em;
 }
 
 img {
@@ -377,7 +378,7 @@ header {
     position: relative;
     z-index: 2;
 }
-}
+
 
 /* Portfolio */
 
@@ -385,7 +386,6 @@ header {
     text-align: center;
     position: relative;
     grid-area: title;
-    left: 1em;
 }
 
 .my-work {
@@ -395,6 +395,7 @@ header {
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
 }
 
 .portfolio__item {
